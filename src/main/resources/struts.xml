@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name = "struts.devMode" value = "true" />
+
+    <package name = "home" namespace="/" extends = "struts-default">
+
+        <action name = "home" class = "com.app.action.DashBoardAction" method = "get">
+            <result name = "success">/view/index.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "init" class = "com.app.action.DashBoardAction" method = "init">
+            <result name = "success" type="redirect">/home</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+    </package>
+
+    <package name = "category" namespace="/category" extends = "struts-default">
+        <action name = "categoryIndex" class = "com.app.action.CategoryAction" method = "index">
+            <result name = "success">/view/category/index.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "categoryCreateGet" class = "com.app.action.CategoryAction" method = "createGet">
+            <result name = "success">/view/category/create.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "categoryCreatePost" class = "com.app.action.CategoryAction" method = "createPost">
+            <result name = "success" type="redirect">categoryIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input" type="redirect">categoryCreateGet</result>
+        </action>
+        <action name = "categoryUpdateGet" class = "com.app.action.CategoryAction" method = "updateGet">
+            <result name = "success">/view/category/update.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "categoryUpdatePost" class = "com.app.action.CategoryAction" method = "updatePost">
+            <result name = "success" type="redirect">categoryIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input">/view/category/update.jsp</result>
+        </action>
+<!--        <action name = "categoryDeletePost" class = "com.app.action.CategoryAction" method = "deletePost">-->
+<!--            <result name = "success" type="redirect">categoryIndex</result>-->
+<!--            <result name = "bad">/view/pages/samples/500.jsp</result>-->
+<!--        </action>-->
+    </package>
+
+    <package name = "author" namespace="/author" extends = "struts-default">
+        <action name = "authorIndex" class = "com.app.action.AuthorAction" method = "index">
+            <result name = "success">/view/author/index.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "authorCreateGet" class = "com.app.action.AuthorAction" method = "createGet">
+            <result name = "success">/view/author/create.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "authorCreatePost" class = "com.app.action.AuthorAction" method = "createPost">
+            <result name = "success" type="redirect">authorIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input" type="redirect">authorCreateGet</result>
+        </action>
+        <action name = "authorUpdateGet" class = "com.app.action.AuthorAction" method = "updateGet">
+            <result name = "success">/view/author/update.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "authorUpdatePost" class = "com.app.action.AuthorAction" method = "updatePost">
+            <result name = "success" type="redirect">authorIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input">/view/author/update.jsp</result>
+        </action>
+<!--        <action name = "authorDeletePost" class = "com.app.action.AuthorAction" method = "deletePost">-->
+<!--            <result name = "success" type="redirect">authorIndex</result>-->
+<!--            <result name = "bad">/view/pages/samples/500.jsp</result>-->
+<!--        </action>-->
+    </package>
+
+    <package name = "shop" namespace="/shop" extends = "struts-default">
+        <action name = "shopIndex" class = "com.app.action.ShopAction" method = "index">
+            <result name = "success">/view/shop/index.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "shopCreateGet" class = "com.app.action.ShopAction" method = "createGet">
+            <result name = "success">/view/shop/create.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "shopCreatePost" class = "com.app.action.ShopAction" method = "createPost">
+            <result name = "success" type="redirect">shopIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input" type="redirect">shopCreateGet</result>
+        </action>
+        <action name = "shopUpdateGet" class = "com.app.action.ShopAction" method = "updateGet">
+            <result name = "success">/view/shop/update.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "shopUpdatePost" class = "com.app.action.ShopAction" method = "updatePost">
+            <result name = "success" type="redirect">shopIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input">/view/shop/update.jsp</result>
+        </action>
+        <action name = "shopUpdateStatusGet" class = "com.app.action.ShopAction" method = "updateStatusGet">
+            <result name = "success">/view/shop/updateStatus.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "shopUpdateStatusPost" class = "com.app.action.ShopAction" method = "updateStatusPost">
+            <result name = "success" type="redirect">shopIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input">shopUpdateStatusGet</result>
+        </action>
+    </package>
+    <package name = "book" namespace="/book" extends = "struts-default">
+        <action name = "bookIndex" class = "com.app.action.BookAction" method = "index">
+            <result name = "success">/view/book/index.jsp</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+        <action name = "bookCreateGet" class = "com.app.action.BookAction" method = "createGet">
+            <result name = "success">/view/book/create.jsp</result>
+            <result name = "requireCategory" type="redirectAction">
+                <param name="actionName">categoryCreateGet</param>
+                <param name="namespace">/category</param>
+            </result>
+            <result name = "requireShop" type="redirectAction">
+                <param name="actionName">shopCreateGet</param>
+                <param name="namespace">/shop</param>
+            </result>
+            <result name = "requireAuthor" type="redirectAction">
+                <param name="actionName">authorCreateGet</param>
+                <param name="namespace">/author</param>
+            </result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+
+        <action name = "bookCreatePost" class = "com.app.action.BookAction" method = "createPost">
+            <result name = "success" type="redirect">bookIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input" type="redirect">bookCreateGet</result>
+        </action>
+
+        <action name = "bookUpdateGet" class = "com.app.action.BookAction" method = "updateGet">
+            <result name = "success">/view/book/update.jsp</result>
+            <result name = "requireCategory" type="redirectAction">
+                <param name="actionName">categoryCreateGet</param>
+                <param name="namespace">/category</param>
+            </result>
+            <result name = "requireShop" type="redirectAction">
+                <param name="actionName">shopCreateGet</param>
+                <param name="namespace">/shop</param>
+            </result>
+            <result name = "requireAuthor" type="redirectAction">
+                <param name="actionName">authorCreateGet</param>
+                <param name="namespace">/author</param>
+            </result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+
+        <action name = "bookUpdatePost" class = "com.app.action.BookAction" method = "updatePost">
+            <result name = "success" type="redirect">bookIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+            <result name = "input" type="redirect">bookUpdateGet</result>
+        </action>
+
+        <action name = "bookDeletePost" class = "com.app.action.BookAction" method = "deletePost">
+            <result name = "success" type="redirect">bookIndex</result>
+            <result name = "bad">/view/pages/samples/500.jsp</result>
+        </action>
+    </package>
+</struts>
