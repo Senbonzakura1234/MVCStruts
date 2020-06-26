@@ -18,7 +18,7 @@ add_box e146
 add_circle e147
 add_circle_outline e148
 add_location e567
-add_shopping_cart e854
+add_publisherping_cart e854
 add_to_photos e39d
 add_to_queue e05c
 adjust e39e
@@ -493,7 +493,7 @@ local_phone e551
 local_pizza e552
 local_play e553
 local_post_office e554
-local_printshop e555
+local_printpublisher e555
 local_see e557
 local_shipping e558
 local_taxi e559
@@ -681,7 +681,7 @@ remove_circle e15c
 remove_circle_outline e15d
 remove_from_queue e067
 remove_red_eye e417
-remove_shopping_cart e928
+remove_publisherping_cart e928
 reorder e8fe
 repeat e040
 repeat_one e041
@@ -748,10 +748,10 @@ settings_remote e8c7
 settings_system_daydream e1c3
 settings_voice e8c8
 share e80d
-shop e8c9
-shop_two e8ca
-shopping_basket e8cb
-shopping_cart e8cc
+publisher e8c9
+publisher_two e8ca
+publisherping_basket e8cb
+publisherping_cart e8cc
 short_text e261
 show_chart e6e1
 shuffle e043

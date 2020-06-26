@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "shop")
-public class Shop {
+@Table(name = "publisher")
+public class Publisher {
     @Id
     @Column(name = "id")
     private String id;
 
-    @OneToMany(mappedBy = "shop")
+    @OneToMany(mappedBy = "publisher")
     private List<Book> books;
 
     @NotBlank(message = "please provide a name")
@@ -42,7 +42,7 @@ public class Shop {
     @Column(name = "status", nullable = false)
     private StatusEnum status;
 
-    public Shop() {
+    public Publisher() {
         id = UUID.randomUUID().toString();
         status = StatusEnum.ACTIVE;
         createdAt = System.currentTimeMillis();

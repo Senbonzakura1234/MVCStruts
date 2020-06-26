@@ -77,7 +77,7 @@ d="M363 235v42h-86v86h-42v-86h-86v-42h86v-86h42v86h86zM256 469c118 0 213 -95 213
 d="M256 85c94 0 171 77 171 171s-77 171 -171 171s-171 -77 -171 -171s77 -171 171 -171zM256 469c118 0 213 -95 213 -213s-95 -213 -213 -213s-213 95 -213 213s95 213 213 213zM277 363v-86h86v-42h-86v-86h-42v86h-86v42h86v86h42z" />
     <glyph glyph-name="add_location" unicode="add_location" 
 d="M341 299v42h-64v64h-42v-64h-64v-42h64v-64h42v64h64zM256 469c82 0 149 -67 149 -149c0 -112 -149 -277 -149 -277s-149 165 -149 277c0 82 67 149 149 149z" />
-    <glyph glyph-name="add_shopping_cart" unicode="add_shopping_cart" 
+    <glyph glyph-name="add_publisherping_cart" unicode="add_publisherping_cart"
 d="M153 197c0 -3 2 -5 5 -5h247v-43h-256c-23 0 -42 20 -42 43c0 7 2 14 5 20l29 53l-77 162h-43v42h70c13.5017 -28.165 26.8327 -56.5006 40 -85c17.0313 -35.6353 33.8016 -71.5317 51 -107h150c27.393 49.9404 55.2665 99.4002 82 150l37 -21l-82 -149
 c-7 -13 -21 -22 -37 -22h-159l-19 -35zM363 128c23 0 42 -20 42 -43s-19 -42 -42 -42s-43 19 -43 42s20 43 43 43zM149 128c23 0 43 -20 43 -43s-20 -42 -43 -42s-42 19 -42 42s19 43 42 43zM235 320v64h-64v43h64v64h42v-64h64v-43h-64v-64h-42z" />
     <glyph glyph-name="add_to_photos" unicode="add_to_photos" 
@@ -1235,7 +1235,7 @@ d="M332 154l-23 87l70 58l-90 5l-33 84l-33 -84l-91 -5l71 -58l-23 -87l76 49zM427 2
 c-23 0 -42 -20 -42 -43z" />
     <glyph glyph-name="local_post_office" unicode="local_post_office" 
 d="M427 341v43l-171 -107l-171 107v-43l171 -106zM427 427c23 0 42 -20 42 -43v-256c0 -23 -19 -43 -42 -43h-342c-23 0 -42 20 -42 43v256c0 23 19 43 42 43h342z" />
-    <glyph glyph-name="local_printshop" unicode="local_printshop" 
+    <glyph glyph-name="local_printpublisher" unicode="local_printpublisher"
 d="M384 448v-85h-256v85h256zM405 256c12 0 22 9 22 21s-10 22 -22 22s-21 -10 -21 -22s9 -21 21 -21zM341 107v106h-170v-106h170zM405 341c35 0 64 -29 64 -64v-128h-85v-85h-256v85h-85v128c0 35 29 64 64 64h298z" />
     <glyph glyph-name="local_see" unicode="local_see" 
 d="M256 149c59 0 107 48 107 107s-48 107 -107 107s-107 -48 -107 -107s48 -107 107 -107zM192 469h128l39 -42h68c23 0 42 -20 42 -43v-256c0 -23 -19 -43 -42 -43h-342c-23 0 -42 20 -42 43v256c0 23 19 43 42 43h68zM188 256c0 38 30 68 68 68s68 -30 68 -68
@@ -1687,7 +1687,7 @@ d="M341 299v-43h-170v43h170zM448 149v256h-384v-256h384zM448 448c23 0 43 -19 43 -
     <glyph glyph-name="remove_red_eye" unicode="remove_red_eye" 
 d="M256 320c35 0 64 -29 64 -64s-29 -64 -64 -64s-64 29 -64 64s29 64 64 64zM256 149c59 0 107 48 107 107s-48 107 -107 107s-107 -48 -107 -107s48 -107 107 -107zM256 416c107 0 198 -66 235 -160c-37 -94 -128 -160 -235 -160s-198 66 -235 160c37 94 128 160 235 160z
 " />
-    <glyph glyph-name="remove_shopping_cart" unicode="remove_shopping_cart" 
+    <glyph glyph-name="remove_publisherping_cart" unicode="remove_publisherping_cart"
 d="M149 128c23 0 43 -20 43 -43s-20 -42 -43 -42s-42 19 -42 42s19 43 42 43zM332 235l-192 192h287c12 0 21 -10 21 -22c0 -4 -1 -7 -3 -10l-76 -138c-7 -13 -21 -22 -37 -22zM158 192h108l-43 43h-50l-19 -35l-1 -3c0 -3 2 -5 5 -5zM485 27l-27 -27l-61 61
 c-8 -11 -20 -18 -34 -18c-23 0 -43 19 -43 42c0 14 7 27 18 35l-30 29h-159c-23 0 -42 20 -42 43c0 7 2 14 5 20l29 53l-47 99l-94 94l27 27z" />
     <glyph glyph-name="reorder" unicode="reorder" 
@@ -1865,14 +1865,14 @@ M149 0v43h43v-43h-43z" />
     <glyph glyph-name="share" unicode="share" 
 d="M384 169c34 0 62 -28 62 -62s-28 -63 -62 -63s-62 29 -62 63c0 5 0 10 1 14l-151 88c-12 -11 -27 -17 -44 -17c-35 0 -64 29 -64 64s29 64 64 64c17 0 32 -6 44 -17l150 87c-1 5 -2 10 -2 15c0 35 29 64 64 64s64 -29 64 -64s-29 -64 -64 -64c-17 0 -32 7 -44 18
 l-150 -88c1 -5 2 -10 2 -15s-1 -10 -2 -15l152 -88c11 10 26 16 42 16z" />
-    <glyph glyph-name="shop" unicode="shop" 
+    <glyph glyph-name="publisher" unicode="publisher"
 d="M192 128l160 107l-160 85v-192zM213 427v-43h86v43h-86zM341 384h128v-277c0 -24 -18 -43 -42 -43h-342c-24 0 -42 19 -42 43v277h128v43c0 24 18 42 42 42h86c24 0 42 -18 42 -42v-43z" />
-    <glyph glyph-name="shop_two" unicode="shop_two" 
+    <glyph glyph-name="publisher_two" unicode="publisher_two"
 d="M256 192l117 85l-117 64v-149zM256 448v-43h85v43h-85zM384 405h107v-234c0 -24 -19 -43 -43 -43h-299c-24 0 -42 19 -42 43v234h106v43c0 24 19 43 43 43h85c24 0 43 -19 43 -43v-43zM64 320v-235h341c0 -24 -18 -42 -42 -42h-299c-24 0 -43 18 -43 42v235h43z" />
-    <glyph glyph-name="shopping_basket" unicode="shopping_basket" 
+    <glyph glyph-name="publisherping_basket" unicode="publisherping_basket"
 d="M256 149c23 0 43 20 43 43s-20 43 -43 43s-43 -20 -43 -43s20 -43 43 -43zM192 320h128l-64 94zM367 320h102c12 0 22 -9 22 -21c-17.3126 -69.0207 -36.8524 -135.814 -55 -204c-5 -18 -21 -31 -41 -31h-278c-20 0 -36 13 -41 31l-54 198c-1 2 -1 4 -1 6
 c0 12 10 21 22 21h102l93 140c4 6 11 9 18 9s14 -3 18 -9z" />
-    <glyph glyph-name="shopping_cart" unicode="shopping_cart" 
+    <glyph glyph-name="publisherping_cart" unicode="publisherping_cart"
 d="M363 128c23 0 42 -20 42 -43s-19 -42 -42 -42s-43 19 -43 42s20 43 43 43zM21 469h70l20 -42h316c12 0 21 -10 21 -22c0 -4 -1 -7 -3 -10l-76 -138c-7 -13 -21 -22 -37 -22h-159l-19 -35l-1 -3c0 -3 2 -5 5 -5h247v-43h-256c-23 0 -42 20 -42 43c0 7 2 14 5 20l29 53
 l-77 162h-43v42zM149 128c23 0 43 -20 43 -43s-20 -42 -43 -42s-42 19 -42 42s19 43 42 43z" />
     <glyph glyph-name="short_text" unicode="short_text" 

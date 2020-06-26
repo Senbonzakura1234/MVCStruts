@@ -66,7 +66,7 @@
                                                         <s:property value="name" />
                                                     </button>
                                                 </td>
-                                                <td><s:property value="shop.name" /></td>
+                                                <td><s:property value="publisher.name" /></td>
                                                 <td><s:property value="category.name" /></td>
                                                 <td><s:property value="author.name" /></td>
                                                 <td>

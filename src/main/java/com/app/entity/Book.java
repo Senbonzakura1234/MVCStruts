@@ -1,7 +1,6 @@
 package com.app.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
@@ -12,12 +11,12 @@ public class Book {
     @Column(name = "id")
     private String id;
 
-    @Column(name = "shopId")
-    private String shopId;
+    @Column(name = "publisherId")
+    private String publisherId;
 
     @ManyToOne
-    @JoinColumn(name = "shopId", updatable = false, insertable = false)
-    private Shop shop;
+    @JoinColumn(name = "publisherId", updatable = false, insertable = false)
+    private Publisher publisher;
 
     @Column(name = "categoryId")
     private String categoryId;
@@ -82,20 +81,20 @@ public class Book {
         this.id = id;
     }
 
-    public String getShopId() {
-        return shopId;
+    public String getPublisherId() {
+        return publisherId;
     }
 
-    public void setShopId(String shopId) {
-        this.shopId = shopId;
+    public void setPublisherId(String publisherId) {
+        this.publisherId = publisherId;
     }
 
-    public Shop getShop() {
-        return shop;
+    public Publisher getPublisher() {
+        return publisher;
     }
 
-    public void setShop(Shop shop) {
-        this.shop = shop;
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 
     public String getCategoryId() {

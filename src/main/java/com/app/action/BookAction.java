@@ -3,11 +3,11 @@ package com.app.action;
 import com.app.context.AuthorBean;
 import com.app.context.BookBean;
 import com.app.context.CategoryBean;
-import com.app.context.ShopBean;
+import com.app.context.PublisherBean;
 import com.app.entity.Author;
 import com.app.entity.Book;
 import com.app.entity.Category;
-import com.app.entity.Shop;
+import com.app.entity.Publisher;
 import com.app.model.SelectOption;
 import com.app.model.returnResult.DatabaseQueryResult;
 import com.opensymphony.xwork2.ActionSupport;
@@ -18,20 +18,20 @@ import java.util.List;
 public class BookAction extends ActionSupport {
     AuthorBean authorBean;
     CategoryBean categoryBean;
-    ShopBean shopBean;
+    PublisherBean publisherBean;
     BookBean bookBean;
 
     public String query;
 
 
     public String id;
-    public String shopId;
+    public String publisherId;
     public String authorId;
     public String categoryId;
     public String name;
     public String description;
     public Book.StatusEnum status;
-    public List<SelectOption> shopSelectList;
+    public List<SelectOption> publisherSelectList;
     public List<SelectOption> authorSelectList;
     public List<SelectOption> categorySelectList;
     public List<SelectOption> statusSelectList;
@@ -54,10 +54,10 @@ public class BookAction extends ActionSupport {
         if(categories == null) return "bad";
         if(categories.isEmpty()) return "requireCategory";
 
-        shopBean = new ShopBean();
-        List<Shop> shops = shopBean.getAllShop("");
-        if(shops == null) return "bad";
-        if(shops.isEmpty()) return "requireShop";
+        publisherBean = new PublisherBean();
+        List<Publisher> publishers = publisherBean.getAllPublisher("");
+        if(publishers == null) return "bad";
+        if(publishers.isEmpty()) return "requirePublisher";
 
         authorBean = new AuthorBean();
         List<Author> authors = authorBean.getAllAuthor("");
@@ -65,10 +65,10 @@ public class BookAction extends ActionSupport {
         if(authors.isEmpty()) return "requireAuthor";
 
 
-        shopSelectList = new ArrayList<>();
-        for (Shop item: shops
+        publisherSelectList = new ArrayList<>();
+        for (Publisher item: publishers
         ) {
-            shopSelectList.add(new SelectOption(item.getId(), item.getName(), false));
+            publisherSelectList.add(new SelectOption(item.getId(), item.getName(), false));
         }
         authorSelectList = new ArrayList<>();
         for (Author item: authors
@@ -90,7 +90,7 @@ public class BookAction extends ActionSupport {
         book.setDescription(description);
         book.setAuthorId(authorId);
         book.setCategoryId(categoryId);
-        book.setShopId(shopId);
+        book.setPublisherId(publisherId);
         bookBean = new BookBean();
         DatabaseQueryResult DQR = bookBean.addBook(book);
         if(DQR.isSuccess()){
@@ -108,7 +108,7 @@ public class BookAction extends ActionSupport {
             name = book.getName();
             description = book.getDescription();
             categoryId = book.getCategoryId();
-            shopId = book.getShopId();
+            publisherId = book.getPublisherId();
             authorId = book.getAuthorId();
 
             categoryBean = new CategoryBean();
@@ -116,20 +116,20 @@ public class BookAction extends ActionSupport {
             if(categories == null) return "bad";
             if(categories.isEmpty()) return "requireCategory";
 
-            shopBean = new ShopBean();
-            List<Shop> shops = shopBean.getAllShop("");
-            if(shops == null) return "bad";
-            if(shops.isEmpty()) return "requireShop";
+            publisherBean = new PublisherBean();
+            List<Publisher> publishers = publisherBean.getAllPublisher("");
+            if(publishers == null) return "bad";
+            if(publishers.isEmpty()) return "requirePublisher";
 
             authorBean = new AuthorBean();
             List<Author> authors = authorBean.getAllAuthor("");
             if(authors == null) return "bad";
             if(authors.isEmpty()) return "requireAuthor";
 
-            shopSelectList = new ArrayList<>();
-            for (Shop item: shops
+            publisherSelectList = new ArrayList<>();
+            for (Publisher item: publishers
             ) {
-                shopSelectList.add(new SelectOption(item.getId(), item.getName(), item.getId().equals(shopId)));
+                publisherSelectList.add(new SelectOption(item.getId(), item.getName(), item.getId().equals(publisherId)));
             }
             authorSelectList = new ArrayList<>();
             for (Author item: authors
@@ -152,7 +152,7 @@ public class BookAction extends ActionSupport {
         Book book = new Book();
         book.setName(name);
         book.setDescription(description);
-        book.setShopId(shopId);
+        book.setPublisherId(publisherId);
         book.setCategoryId(categoryId);
         book.setAuthorId(authorId);
         bookBean = new BookBean();
@@ -182,12 +182,12 @@ public class BookAction extends ActionSupport {
         this.id = id;
     }
 
-    public String getShopId() {
-        return shopId;
+    public String getPublisherId() {
+        return publisherId;
     }
 
-    public void setShopId(String shopId) {
-        this.shopId = shopId;
+    public void setPublisherId(String publisherId) {
+        this.publisherId = publisherId;
     }
 
     public String getAuthorId() {
@@ -230,12 +230,12 @@ public class BookAction extends ActionSupport {
         this.status = status;
     }
 
-    public List<SelectOption> getShopSelectList() {
-        return shopSelectList;
+    public List<SelectOption> getPublisherSelectList() {
+        return publisherSelectList;
     }
 
-    public void setShopSelectList(List<SelectOption> shopSelectList) {
-        this.shopSelectList = shopSelectList;
+    public void setPublisherSelectList(List<SelectOption> publisherSelectList) {
+        this.publisherSelectList = publisherSelectList;
     }
 
     public List<SelectOption> getAuthorSelectList() {

@@ -41,7 +41,7 @@
                 <div class="mdc-layout-grid">
                     <div class="mdc-layout-grid__inner">
                         <div class="mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-6-desktop stretch-card">
-                            <s:form method="POST" class="mdc-card" namespace="/shop" action="createPost" theme="simple">
+                            <s:form method="POST" class="mdc-card" namespace="/publisher" action="createPost" theme="simple">
                                 <h6 class="card-title">Create Publisher</h6>
                                 <p class="card-sub-title text-danger">
                                         <%--                                        ${message}--%>

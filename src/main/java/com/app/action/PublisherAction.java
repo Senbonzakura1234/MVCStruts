@@ -1,7 +1,7 @@
 package com.app.action;
 
-import com.app.context.ShopBean;
-import com.app.entity.Shop;
+import com.app.context.PublisherBean;
+import com.app.entity.Publisher;
 import com.app.model.SelectOption;
 import com.app.model.returnResult.DatabaseQueryResult;
 import com.opensymphony.xwork2.ActionSupport;
@@ -9,23 +9,23 @@ import com.opensymphony.xwork2.ActionSupport;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShopAction extends ActionSupport {
-    ShopBean shopBean;
+public class PublisherAction extends ActionSupport {
+    PublisherBean publisherBean;
 
     public String id;
     public String name;
     public String address;
     public String email;
     public String phone;
-    public Shop.StatusEnum status;
-    public List<Shop> shops;
+    public Publisher.StatusEnum status;
+    public List<Publisher> publishers;
     public List<SelectOption> statusSelectList;
 
 
     public String index(){
-        shopBean = new ShopBean();
-        shops = shopBean.getAllShop("");
-        if(shops != null){
+        publisherBean = new PublisherBean();
+        publishers = publisherBean.getAllPublisher("");
+        if(publishers != null){
             return "success";
         }else {
             return "bad";
@@ -35,13 +35,13 @@ public class ShopAction extends ActionSupport {
         return "success";
     }
     public String createPost(){
-        Shop shop = new Shop();
-        shop.setName(name);
-        shop.setAddress(address);
-        shop.setEmail(email);
-        shop.setPhone(phone);
-        shopBean = new ShopBean();
-        DatabaseQueryResult DQR = shopBean.addShop(shop);
+        Publisher publisher = new Publisher();
+        publisher.setName(name);
+        publisher.setAddress(address);
+        publisher.setEmail(email);
+        publisher.setPhone(phone);
+        publisherBean = new PublisherBean();
+        DatabaseQueryResult DQR = publisherBean.addPublisher(publisher);
         if(DQR.isSuccess()){
             return "success";
         }else {
@@ -49,27 +49,27 @@ public class ShopAction extends ActionSupport {
         }
     }
     public String updateGet(){
-        shopBean = new ShopBean();
-        Shop shop = shopBean.getShop(id);
-        if(shop != null){
-            id = shop.getId();
-            name = shop.getName();
-            address = shop.getAddress();
-            email = shop.getEmail();
-            phone = shop.getPhone();
+        publisherBean = new PublisherBean();
+        Publisher publisher = publisherBean.getPublisher(id);
+        if(publisher != null){
+            id = publisher.getId();
+            name = publisher.getName();
+            address = publisher.getAddress();
+            email = publisher.getEmail();
+            phone = publisher.getPhone();
             return "success";
         }else {
             return "bad";
         }
     }
     public String updatePost(){
-        Shop shop = new Shop();
-        shop.setName(name);
-        shop.setPhone(phone);
-        shop.setEmail(email);
-        shop.setAddress(address);
-        shopBean = new ShopBean();
-        DatabaseQueryResult DQR = shopBean.updateShop(shop, id);
+        Publisher publisher = new Publisher();
+        publisher.setName(name);
+        publisher.setPhone(phone);
+        publisher.setEmail(email);
+        publisher.setAddress(address);
+        publisherBean = new PublisherBean();
+        DatabaseQueryResult DQR = publisherBean.updatePublisher(publisher, id);
         if(DQR.isSuccess()){
             return "success";
         }else {
@@ -77,13 +77,13 @@ public class ShopAction extends ActionSupport {
         }
     }
     public String updateStatusGet(){
-        shopBean = new ShopBean();
-        Shop shop = shopBean.getShop(id);
-        if(shop != null){
+        publisherBean = new PublisherBean();
+        Publisher publisher = publisherBean.getPublisher(id);
+        if(publisher != null){
             statusSelectList = new ArrayList<>();
-            for (Shop.StatusEnum item: Shop.StatusEnum.values()
+            for (Publisher.StatusEnum item: Publisher.StatusEnum.values()
             ) {
-                statusSelectList.add(new SelectOption(item.name(), item.name(), shop.getStatus() == item));
+                statusSelectList.add(new SelectOption(item.name(), item.name(), publisher.getStatus() == item));
             }
             return "success";
         }else {
@@ -91,10 +91,10 @@ public class ShopAction extends ActionSupport {
         }
     }
     public String updateStatusPost(){
-        Shop shop = new Shop();
-        shop.setStatus(status);
-        shopBean = new ShopBean();
-        DatabaseQueryResult DQR = shopBean.updateShopStatus(shop, id);
+        Publisher publisher = new Publisher();
+        publisher.setStatus(status);
+        publisherBean = new PublisherBean();
+        DatabaseQueryResult DQR = publisherBean.updatePublisherStatus(publisher, id);
         if(DQR.isSuccess()){
             return "success";
         }else {
@@ -142,19 +142,19 @@ public class ShopAction extends ActionSupport {
         this.phone = phone;
     }
 
-    public List<Shop> getShops() {
-        return shops;
+    public List<Publisher> getPublishers() {
+        return publishers;
     }
 
-    public void setShops(List<Shop> shops) {
-        this.shops = shops;
+    public void setPublishers(List<Publisher> publishers) {
+        this.publishers = publishers;
     }
 
-    public Shop.StatusEnum getStatus() {
+    public Publisher.StatusEnum getStatus() {
         return status;
     }
 
-    public void setStatus(Shop.StatusEnum status) {
+    public void setStatus(Publisher.StatusEnum status) {
         this.status = status;
     }
 

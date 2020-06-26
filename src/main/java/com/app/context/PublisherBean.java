@@ -1,7 +1,6 @@
 package com.app.context;
 
-import com.app.entity.Author;
-import com.app.entity.Shop;
+import com.app.entity.Publisher;
 import com.app.model.returnResult.DatabaseQueryResult;
 
 import javax.persistence.EntityManager;
@@ -10,23 +9,23 @@ import javax.persistence.Persistence;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShopBean {
+public class PublisherBean {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
     EntityManager em = emf.createEntityManager();
     
-    public List<Shop> getAllShop(String query) {
+    public List<Publisher> getAllPublisher(String query) {
         
         try {
             em.getTransaction().begin();
-            List<Shop> list;
+            List<Publisher> list;
             if (query != null && !query.isEmpty()) {
                 list = em.createQuery(
-                        "SELECT c from Shop c where name like :queryString",
-                        Shop.class).setParameter("queryString", "%" + query + "%")
+                        "SELECT c from Publisher c where name like :queryString",
+                        Publisher.class).setParameter("queryString", "%" + query + "%")
                         .getResultList();
             } else {
-                list =  em.createQuery("SELECT c from Shop c",
-                        Shop.class)
+                list =  em.createQuery("SELECT c from Publisher c",
+                        Publisher.class)
                         .getResultList();
             }
             em.getTransaction().commit();
@@ -40,15 +39,15 @@ public class ShopBean {
         }
     }
 
-    public Shop getShop(String id) {
+    public Publisher getPublisher(String id) {
         if(id != null && !id.isEmpty()){
             
             try {
                 em.getTransaction().begin();
-                Shop shop = em.find(Shop.class, id);
+                Publisher publisher = em.find(Publisher.class, id);
                 em.getTransaction().commit();
                 em.close();emf.close();
-                return shop;
+                return publisher;
             } catch (Exception e) {
                 e.printStackTrace();
                 em.getTransaction().rollback();
@@ -60,52 +59,52 @@ public class ShopBean {
         }
     }
 
-    public DatabaseQueryResult addShop(Shop shop) {
-        if(shop != null){
+    public DatabaseQueryResult addPublisher(Publisher publisher) {
+        if(publisher != null){
             try {
                 em.getTransaction().begin();
-                em.persist(shop);
+                em.persist(publisher);
                 em.getTransaction().commit();
                 em.close();emf.close();
-                return new DatabaseQueryResult(true, "addShop success");
+                return new DatabaseQueryResult(true, "addPublisher success");
             } catch (Exception e) {
                 e.printStackTrace();
                 em.getTransaction().rollback();
                 em.close();emf.close();
-                return new DatabaseQueryResult(false, "addShop fail, " + e.getMessage());
+                return new DatabaseQueryResult(false, "addPublisher fail, " + e.getMessage());
             }
         }else {
-            return new DatabaseQueryResult(false, "addShop fail, input is null");
+            return new DatabaseQueryResult(false, "addPublisher fail, input is null");
         }
     }
 
-    public DatabaseQueryResult updateShop(Shop shop, String id) {
-        if(shop != null && id != null && !id.isEmpty()){
+    public DatabaseQueryResult updatePublisher(Publisher publisher, String id) {
+        if(publisher != null && id != null && !id.isEmpty()){
             try {
                 em.getTransaction().begin();
-                Shop u = em.find(Shop.class, id);
+                Publisher u = em.find(Publisher.class, id);
                 if(u != null){
-                    u.setName(shop.getName());
-                    u.setAddress(shop.getAddress());
-                    u.setPhone(shop.getPhone());
-                    u.setEmail(shop.getEmail());
+                    u.setName(publisher.getName());
+                    u.setAddress(publisher.getAddress());
+                    u.setPhone(publisher.getPhone());
+                    u.setEmail(publisher.getEmail());
                     u.setUpdatedAt(System.currentTimeMillis());
                     em.getTransaction().commit();
                     em.close();emf.close();
                     return new DatabaseQueryResult(true,
-                            "updateShop success");
+                            "updatePublisher success");
                 }else {
                     em.getTransaction().commit();
                     em.close();emf.close();
                     return new DatabaseQueryResult(false,
-                            "updateShop failed, Shop not found");
+                            "updatePublisher failed, Publisher not found");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
                 em.getTransaction().rollback();
                 em.close();emf.close();
                 return new DatabaseQueryResult(false,
-                        "updateShop failed, " + e.getMessage());
+                        "updatePublisher failed, " + e.getMessage());
             }
         }else {
             return new DatabaseQueryResult(false,
@@ -113,37 +112,37 @@ public class ShopBean {
         }
     }
 
-    public DatabaseQueryResult updateShopStatus(Shop shop, String id) {
+    public DatabaseQueryResult updatePublisherStatus(Publisher publisher, String id) {
         if(id != null && !id.isEmpty()){
             
             try {
                 em.getTransaction().begin();
-                Shop u = em.find(Shop.class, id);
+                Publisher u = em.find(Publisher.class, id);
                 if(u != null){
-                    u.setStatus(shop.getStatus());
+                    u.setStatus(publisher.getStatus());
                     u.setUpdatedAt(System.currentTimeMillis());
                     u.setDeletedAt(System.currentTimeMillis());
 
                     em.getTransaction().commit();
                     em.close();emf.close();
                     return new DatabaseQueryResult(true,
-                            "updateShop status success");
+                            "updatePublisher status success");
                 }else {
                     em.getTransaction().commit();
                     em.close();emf.close();
                     return new DatabaseQueryResult(false,
-                            "updateShop status failed, Shop not found");
+                            "updatePublisher status failed, Publisher not found");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
                 em.getTransaction().rollback();
                 em.close();emf.close();
                 return new DatabaseQueryResult(false,
-                        "updateShop status failed, " + e.getMessage());
+                        "updatePublisher status failed, " + e.getMessage());
             }
         }else {
             return new DatabaseQueryResult(false,
-                    "updateShop status failed, bad request");
+                    "updatePublisher status failed, bad request");
         }
     }
 }

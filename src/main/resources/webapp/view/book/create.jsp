@@ -139,12 +139,12 @@
                                             mdc-layout-grid__cell--span-4-desktop
                                             stretch-card">
                                             <div class="mdc-select  demo-width-class" data-mdc-auto-init="MDCSelect">
-                                                <s:hidden name="shopId" theme="simple"/>
+                                                <s:hidden name="publisherId" theme="simple"/>
                                                 <i class="mdc-select__dropdown-icon"></i>
                                                 <div class="mdc-select__selected-text"></div>
                                                 <div class="mdc-select__menu mdc-menu-surface demo-width-class">
                                                     <ul class="mdc-list">
-                                                        <s:iterator value="shopSelectList">
+                                                        <s:iterator value="publisherSelectList">
                                                             <li class="mdc-list-item
                                                                 <s:if test='%{selected==true}'>mdc-list-item--selected</s:if>"
                                                                 data-value="<s:property value="value" />"

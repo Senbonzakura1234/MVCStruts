@@ -104,56 +104,56 @@
 <!--        </action>-->
     </package>
 
-    <package name = "shop" namespace="/shop" extends = "struts-default">
-        <action name = "index" class = "com.app.action.ShopAction" method = "index">
-            <result name = "success">/view/shop/index.jsp</result>
+    <package name = "publisher" namespace="/publisher" extends = "struts-default">
+        <action name = "index" class = "com.app.action.PublisherAction" method = "index">
+            <result name = "success">/view/publisher/index.jsp</result>
             <result name = "bad">/view/pages/samples/500.jsp</result>
         </action>
-        <action name = "createGet" class = "com.app.action.ShopAction" method = "createGet">
-            <result name = "success">/view/shop/create.jsp</result>
+        <action name = "createGet" class = "com.app.action.PublisherAction" method = "createGet">
+            <result name = "success">/view/publisher/create.jsp</result>
             <result name = "bad">/view/pages/samples/500.jsp</result>
         </action>
-        <action name = "createPost" class = "com.app.action.ShopAction" method = "createPost">
+        <action name = "createPost" class = "com.app.action.PublisherAction" method = "createPost">
             <result name = "success" type="redirectAction">
                 <param name="actionName">index</param>
-                <param name="namespace">/shop</param>
+                <param name="namespace">/publisher</param>
             </result>
             <result name = "bad">/view/pages/samples/500.jsp</result>
             <result name = "input" type="redirectAction">
                 <param name="actionName">createGet</param>
-                <param name="namespace">/shop</param>
+                <param name="namespace">/publisher</param>
             </result>
         </action>
-        <action name = "updateGet" class = "com.app.action.ShopAction" method = "updateGet">
-            <result name = "success">/view/shop/update.jsp</result>
+        <action name = "updateGet" class = "com.app.action.PublisherAction" method = "updateGet">
+            <result name = "success">/view/publisher/update.jsp</result>
             <result name = "bad">/view/pages/samples/500.jsp</result>
         </action>
-        <action name = "updatePost" class = "com.app.action.ShopAction" method = "updatePost">
+        <action name = "updatePost" class = "com.app.action.PublisherAction" method = "updatePost">
             <result name = "success" type="redirectAction">
                 <param name="actionName">index</param>
-                <param name="namespace">/shop</param>
+                <param name="namespace">/publisher</param>
             </result>
             <result name = "bad">/view/pages/samples/500.jsp</result>
             <result name = "input" type="redirectAction">
                 <param name="id">${id}</param>
                 <param name="actionName">updateGet</param>
-                <param name="namespace">/shop</param>
+                <param name="namespace">/publisher</param>
             </result>
         </action>
-        <action name = "updateStatusGet" class = "com.app.action.ShopAction" method = "updateStatusGet">
-            <result name = "success">/view/shop/updateStatus.jsp</result>
+        <action name = "updateStatusGet" class = "com.app.action.PublisherAction" method = "updateStatusGet">
+            <result name = "success">/view/publisher/updateStatus.jsp</result>
             <result name = "bad">/view/pages/samples/500.jsp</result>
         </action>
-        <action name = "updateStatusPost" class = "com.app.action.ShopAction" method = "updateStatusPost">
+        <action name = "updateStatusPost" class = "com.app.action.PublisherAction" method = "updateStatusPost">
             <result name = "success" type="redirectAction">
                 <param name="actionName">index</param>
-                <param name="namespace">/shop</param>
+                <param name="namespace">/publisher</param>
             </result>
             <result name = "bad">/view/pages/samples/500.jsp</result>
             <result name = "input" type="redirectAction">
                 <param name="id">${id}</param>
                 <param name="actionName">updateStatusGet</param>
-                <param name="namespace">/shop</param>
+                <param name="namespace">/publisher</param>
             </result>
         </action>
     </package>
@@ -168,9 +168,9 @@
                 <param name="actionName">createGet</param>
                 <param name="namespace">/category</param>
             </result>
-            <result name = "requireShop" type="redirectAction">
+            <result name = "requirePublisher" type="redirectAction">
                 <param name="actionName">createGet</param>
-                <param name="namespace">/shop</param>
+                <param name="namespace">/publisher</param>
             </result>
             <result name = "requireAuthor" type="redirectAction">
                 <param name="actionName">createGet</param>
@@ -197,9 +197,9 @@
                 <param name="actionName">createGet</param>
                 <param name="namespace">/category</param>
             </result>
-            <result name = "requireShop" type="redirectAction">
+            <result name = "requirePublisher" type="redirectAction">
                 <param name="actionName">createGet</param>
-                <param name="namespace">/shop</param>
+                <param name="namespace">/publisher</param>
             </result>
             <result name = "requireAuthor" type="redirectAction">
                 <param name="actionName">createGet</param>

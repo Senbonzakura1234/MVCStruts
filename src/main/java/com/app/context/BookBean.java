@@ -61,14 +61,14 @@ public class BookBean {
         }
     }
 
-    public List<Book> getBooksOfShop(String id) {
+    public List<Book> getBooksOfPublisher(String id) {
         if (id == null || id.isEmpty()) return null;
         List<Book> list;
         
         try {
             em.getTransaction().begin();
             list = em.createQuery(
-                    "select c from Book  c where shopId = :queryString and status != :queryStatus",
+                    "select c from Book  c where publisherId = :queryString and status != :queryStatus",
                     Book.class)
                     .setParameter("queryString", id)
                     .setParameter("queryStatus", Book.StatusEnum.DELETED)
