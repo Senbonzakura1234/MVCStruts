@@ -1,7 +1,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
     <div class="mdc-drawer__header">
-        <a href="<s:url namespace="/" action="home"/>" class="brand-logo">
+        <a href="<s:url namespace="/" action="index"/>" class="brand-logo">
             <img src="${pageContext.request.contextPath}/assets/images/logo.svg" alt="logo">
         </a>
     </div>
@@ -13,34 +13,34 @@
         <div class="mdc-list-group">
             <nav class="mdc-list mdc-drawer-menu">
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="<s:url namespace="/" action="home"/>">
+                    <a class="mdc-drawer-link" href="<s:url namespace="/" action="index"/>">
                         <i class="material-icons mdc-list-item__start-detail
                         mdc-drawer-item-icon" aria-hidden="true">home</i> Dashboard
                     </a>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="<s:url namespace="/book" action="bookIndex"/>">
+                    <a class="mdc-drawer-link" href="<s:url namespace="/book" action="index"/>">
                         <i class="material-icons mdc-list-item__start-detail
                         mdc-drawer-item-icon"
                            aria-hidden="true">book</i> Book
                     </a>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="<s:url namespace="/shop" action="shopIndex"/>">
+                    <a class="mdc-drawer-link" href="<s:url namespace="/shop" action="index"/>">
                         <i class="material-icons mdc-list-item__start-detail
                         mdc-drawer-item-icon"
                            aria-hidden="true">card_membership</i> Publisher
                     </a>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="<s:url namespace="/author" action="authorIndex"/>">
+                    <a class="mdc-drawer-link" href="<s:url namespace="/author" action="index"/>">
                         <i class="material-icons mdc-list-item__start-detail
                         mdc-drawer-item-icon"
                            aria-hidden="true">person</i> Author
                     </a>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="<s:url namespace="/category" action="categoryIndex"/>">
+                    <a class="mdc-drawer-link" href="<s:url namespace="/category" action="index"/>">
                         <i class="material-icons mdc-list-item__start-detail
                         mdc-drawer-item-icon"
                            aria-hidden="true">label</i> Category

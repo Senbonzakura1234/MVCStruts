@@ -4,7 +4,7 @@
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
             <span class="mdc-top-app-bar__title">Greetings Senbonzakura!</span>
-            <s:form theme="simple" namespace="/book" action="bookIndex" method="GET"
+            <s:form theme="simple" namespace="/book" action="index" method="GET"
                     class="mb-0 mdc-text-field
                     mdc-text-field--outlined mdc-text-field--with-leading-icon
                     search-text-field d-none d-md-flex">
@@ -45,7 +45,8 @@
                       <i class="mdi mdi-settings-outline text-primary"></i>                      
                     </div>
                     <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                      <a href="logout" class="item-subject font-weight-normal">Logout</a>
+<%--suppress HtmlUnknownAnchorTarget --%>
+                      <a href="#/" class="item-subject font-weight-normal">Logout</a>
                     </div>
                   </li>
                 </ul>

@@ -38,7 +38,7 @@
                             <div class="mdc-card p-0">
                                 <h6 class="card-title card-padding pb-0">Authors</h6>
                                 <div class="px-5 text-right">
-                                    <a href="<s:url namespace="/author" action="authorCreateGet"/>"
+                                    <a href="<s:url namespace="/author" action="createGet"/>"
                                        class="mdc-button d-inline-flex">
                                         Add new
                                         <i class="material-icons mdc-button__icon">add_box</i>
@@ -78,7 +78,7 @@
 <%--                                                        filled-button--secondary px-2 mr-2">--%>
 <%--                                                        <i class="material-icons mdc-button__icon">delete</i>--%>
 <%--                                                    </button>--%>
-                                                    <a href="<s:url namespace="/author" action="authorUpdateGet">
+                                                    <a href="<s:url namespace="/author" action="updateGet">
                                                       <s:param name="id"><s:property value="id" /></s:param>
                                                     </s:url>"
                                                        class="mdc-button mdc-button--raised icon-button filled-button--success px-2">

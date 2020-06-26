@@ -38,7 +38,7 @@
                 <div class="mdc-card p-0">
                   <h6 class="card-title card-padding pb-0">Categories</h6>
                   <div class="px-5 text-right">
-                    <a href="<s:url namespace="/category" action="categoryCreateGet"/>"
+                    <a href="<s:url namespace="/category" action="createGet"/>"
                        class="mdc-button d-inline-flex">
                       Add new
                       <i class="material-icons mdc-button__icon">add_box</i>
@@ -66,7 +66,7 @@
                             <td><s:property value="createdAt" /></td>
                             <td><s:property value="updatedAt" /></td>
                             <td>
-                              <a href="<s:url namespace="/category" action="categoryUpdateGet">
+                              <a href="<s:url namespace="/category" action="updateGet">
                                   <s:param name="id"><s:property value="id" /></s:param>
                                 </s:url>"
                                  class="mdc-button mdc-button--raised icon-button filled-button--success px-2">

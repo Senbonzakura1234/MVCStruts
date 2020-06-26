@@ -44,7 +44,8 @@
                             mdc-layout-grid__cell--span-12-phone
                             mdc-layout-grid__cell--span-12-tablet
                             mdc-layout-grid__cell--span-8-desktop stretch-card">
-                            <s:form method="POST" class="mdc-card" action="bookCreatePost" theme="simple">
+                            <s:form method="POST" class="mdc-card" namespace="/book"
+                                    action="createPost" theme="simple">
                                 <h6 class="card-title">Create Book</h6>
                                 <p class="card-sub-title text-danger">
                                         <%--                                        ${message}--%>
