@@ -14,3 +14,9 @@
             </div>
           </div>
         </footer>
+
+<%--<script type="text/javascript">--%>
+<%--    console.log(location.pathname);--%>
+<%--    console.log(location.pathname.split("/"));--%>
+<%--    console.log(location.pathname.split("/").slice(0)[1].replace(/^\/|\/$/g, ''));--%>
+<%--</script>--%>

@@ -1,7 +1,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
     <div class="mdc-drawer__header">
-        <a href="<s:url namespace="/" action="index"/>" class="brand-logo">
+        <a href="<s:url namespace="/home" action="index"/>" class="brand-logo">
             <img src="${pageContext.request.contextPath}/assets/images/logo.svg" alt="logo">
         </a>
     </div>
@@ -13,7 +13,7 @@
         <div class="mdc-list-group">
             <nav class="mdc-list mdc-drawer-menu">
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="<s:url namespace="/" action="index"/>">
+                    <a class="mdc-drawer-link" href="<s:url namespace="/home" action="index"/>">
                         <i class="material-icons mdc-list-item__start-detail
                         mdc-drawer-item-icon" aria-hidden="true">home</i> Dashboard
                     </a>
